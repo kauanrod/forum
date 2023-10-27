@@ -21,6 +21,7 @@ class TopicoService(
   private val topicoFormMapper: TopicoFormMapper,
   private val notFoundMessage: String = "Topico nao encontrado"
 ) {
+
   fun listar(): List<TopicoView> {
     return repository.findAll().stream().map { t ->
       topicoViewMapper.map(t)
