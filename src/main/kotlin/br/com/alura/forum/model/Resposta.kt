@@ -13,7 +13,7 @@ data class Resposta(
   val mensagem: String,
   val dataCriacao: LocalDateTime = LocalDateTime.now(),
   @ManyToOne
-  val autor: Usuario,
+  val usuario: Usuario,
   @ManyToOne
   val topico: Topico,
   val solucao: Boolean
